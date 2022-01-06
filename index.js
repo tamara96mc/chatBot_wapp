@@ -10,7 +10,7 @@ const wakeUpDyno = require("./config/wokeDyno.js")
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const PORT_DYNO = process.env.PORT || 4000; //la confi del puerto heroku
+const PORT_DYNO = 53550; //la confi del puerto heroku
 const DYNO_URL = "https://bot-jira-api.herokuapp.com"; // the url of your dyno
 
 //Middleware
