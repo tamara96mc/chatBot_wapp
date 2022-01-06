@@ -1,5 +1,3 @@
-let fase = 0;
-
 let datos = [];
 
 let fase1 = [];
@@ -22,7 +20,7 @@ const fetch = require('node-fetch');
 
 let clienteModel = require('../models').cliente;
 let proyectoModel = require('../models').proyecto;
-let jiraModel = require('../models').jira;
+
 
 const { sequelize_conexion } = require('../config/db.js');
 
@@ -50,15 +48,10 @@ ManejadorController.createBot = (req, res) => {
           (base64Qr, asciiQR, attempts, urlCode) => {
             console.log(asciiQR); // Optional to log the QR in the terminal
             var matches = base64Qr.match(/^data:([A-Za-z-+\\/]+);base64,(.+)$/),
-              response = {};
 
             if (matches.length !== 3) {
               return new Error('Invalid input string');
             }
-            // response.type = matches[1];
-            // response.data = new Buffer.from(matches[2], 'base64');
-
-            // let imageBuffer = response;
 
             try {
 
@@ -252,7 +245,7 @@ ManejadorController.createBot = (req, res) => {
 
               for (let i = 0; i < proyectos.length; ++i) {
 
-                if (proyectos[i][0] == "CAU") //proyecto seleccionado en la respuesta datos[3]
+                if (proyectos[i][0] == datos[2]) //proyecto seleccionado en la respuesta 
                   tipos.push(proyectos[i][1]);
 
               }
