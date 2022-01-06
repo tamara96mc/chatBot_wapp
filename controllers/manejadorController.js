@@ -48,6 +48,7 @@ ManejadorController.createBot = (req, res) => {
           (base64Qr, asciiQR, attempts, urlCode) => {
             console.log(asciiQR); // Optional to log the QR in the terminal
             var matches = base64Qr.match(/^data:([A-Za-z-+\\/]+);base64,(.+)$/),
+              response = {};
 
             if (matches.length !== 3) {
               return new Error('Invalid input string');
@@ -297,8 +298,6 @@ ManejadorController.createBot = (req, res) => {
 
             } else if (fase5.includes(clienteWA)) {
 
-
-              console.log('datos', datos);
 
               const issue =
                 `{
