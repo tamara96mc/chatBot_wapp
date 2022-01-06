@@ -252,3 +252,5 @@
 {"level":"info","message":"::1 - - [05/Jan/2022:12:42:42 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9598 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-05T12:42:42.114Z"}
 {"level":"info","message":"::1 - - [05/Jan/2022:12:45:50 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9210 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-05T12:45:50.178Z"}
 {"level":"info","message":"::1 - - [05/Jan/2022:12:47:00 +0000] \"POST /api/login HTTP/1.1\" 200 320 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-05T12:47:00.082Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/Jan/2022:11:37:13 +0000] \"GET / HTTP/1.1\" 200 21 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36\"\n","timestamp":"2022-01-06T11:37:13.378Z"}
+{"level":"info","message":"::1 - - [06/Jan/2022:11:39:16 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36\"\n","timestamp":"2022-01-06T11:39:16.615Z"}

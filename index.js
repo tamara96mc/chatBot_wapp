@@ -5,26 +5,20 @@ const morgan = require('morgan');
 const logger = require('./config/winston');
 const {sequelize_bd} = require('./config/db.js');
 const router = require('./router.js');
-const cors= require("cors");
-// const venom = require('venom-bot');
-// const fetch = require('node-fetch');
+const wakeUpDyno = require("./config/wokeDyno.js")
 
 
 const app = express();
-const PORT = process.env.PORT || 3000; //la confi del puerto heroku
-
-// var corsOptions = {
-//     origin: "*",
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     preflightContinue: false,
-//     optionsSuccessStatus: 204
-//   };
-  
+const PORT = process.env.PORT || 3000;
+const PORT_DYNO = process.env.PORT || 4000; //la confi del puerto heroku
+const DYNO_URL = "https://bot-jira-api.herokuapp.com"; // the url of your dyno
 
 //Middleware
 app.use(morgan('combined', { stream: logger.stream }));
 app.use(express.json());
-// app.use(cors(corsOptions)); //Add CORS Middleware
+
+
+
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", '*');
@@ -35,8 +29,13 @@ app.use(function(req, res, next) {
 });
 
 //Rutas
-app.get('/', (req, res) => {res.send('Bienvenidos a Express');});
+app.get('/', (req, res) => {res.send('ChatBot entre Jira y WhatApp');});
 app.use(router);
+
+
+app.listen(PORT_DYNO, () => {
+  wakeUpDyno(DYNO_URL); // will start once server starts
+})
 
 //Connecting to the database
 sequelize_bd.then(()=>{
