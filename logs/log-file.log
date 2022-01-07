@@ -267,3 +267,4 @@
 {"level":"info","message":"::1 - - [07/Jan/2022:10:37:09 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9398 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:37:09.120Z"}
 {"level":"info","message":"::1 - - [07/Jan/2022:10:48:07 +0000] \"POST /manejador/createBot HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:48:07.313Z"}
 {"level":"info","message":"::1 - - [07/Jan/2022:11:03:33 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9442 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T11:03:33.353Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:11:11:37 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9322 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T11:11:37.629Z"}

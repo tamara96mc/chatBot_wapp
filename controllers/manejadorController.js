@@ -64,7 +64,7 @@ ManejadorController.createBot = (req, res) => {
         .then((client) => start(client))
         // 	catch errors
         .catch((err) => {
-          dateLog(err)
+          console.log(err)
         })
 
 
