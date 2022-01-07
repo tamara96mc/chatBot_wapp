@@ -255,3 +255,14 @@
 {"level":"info","message":"::ffff:127.0.0.1 - - [06/Jan/2022:11:37:13 +0000] \"GET / HTTP/1.1\" 200 21 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36\"\n","timestamp":"2022-01-06T11:37:13.378Z"}
 {"level":"info","message":"::1 - - [06/Jan/2022:11:39:16 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36\"\n","timestamp":"2022-01-06T11:39:16.615Z"}
 {"level":"info","message":"::1 - - [06/Jan/2022:11:49:00 +0000] \"GET / HTTP/1.1\" 200 28 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36\"\n","timestamp":"2022-01-06T11:49:00.670Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:11:53 +0000] \"DELETE /manejador/createBot HTTP/1.1\" 404 161 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:11:53.462Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:14:11 +0000] \"POST /manejador/createBot HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:14:11.237Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:17:25 +0000] \"POST /manejador/createBot HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:17:25.923Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:23:48 +0000] \"POST /manejador/createBot HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:23:48.721Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:25:22 +0000] \"POST /manejador/createBot HTTP/1.1\" 500 37 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:25:22.904Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:27:12 +0000] \"POST /manejador/createBot HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:27:12.806Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:28:05 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9266 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:28:05.458Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:30:18 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9266 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:30:18.184Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:32:26 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9238 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:32:26.947Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:37:09 +0000] \"POST /manejador/createBot HTTP/1.1\" 200 9398 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:37:09.120Z"}
+{"level":"info","message":"::1 - - [07/Jan/2022:10:48:07 +0000] \"POST /manejador/createBot HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2022-01-07T10:48:07.313Z"}
