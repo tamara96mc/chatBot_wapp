@@ -134,9 +134,9 @@ ManejadorController.createBot = (req, res) => {
 
 
     function start(client) {
-
      
-      // example: reply every message with "Hi!""
+      getDataClientes(client.session);
+
       client.onMessage((message) => {
 
         getDataClientes(client.session);
@@ -145,6 +145,8 @@ ManejadorController.createBot = (req, res) => {
   
 
         try {
+
+          console.log('clientes -> ' , clientes);
 
           let clienteWA = message.from.substring(2, 11);
 
@@ -167,6 +169,7 @@ ManejadorController.createBot = (req, res) => {
                 .sendText(message.from, `Hola 👋, bienvenido al soporte de JIRA. Vamos a crear un ticket, ¿Me puedes facilitar un resumen para el ticket?`)
                 .then((result) => {
                   //console.log('Result: ', result); //return object success
+                  datos[0] = message.body;
                 })
                 .catch((erro) => {
                   console.error('Error when sending: ', erro); //return object error
@@ -175,7 +178,7 @@ ManejadorController.createBot = (req, res) => {
 
               telefono = message.sender.id;
               nombre = message.sender.pushname;
-              datos.push(message.body);
+              //datos.push(message.body);
 
               if (fase1.includes(clienteWA)) {
 
@@ -184,6 +187,7 @@ ManejadorController.createBot = (req, res) => {
                   .then((result) => {
                     //console.log('Result: ', result); //return object success
                     fase1 = fase1.filter(val => !clienteWA.includes(val));
+                    datos[1] = message.body;
                   })
                   .catch((erro) => {
                     console.error('Error when sending: ', erro); //return object error
@@ -217,6 +221,7 @@ ManejadorController.createBot = (req, res) => {
                   .then((result) => {
                     //console.log('Result2: ', result); //return object success
                     fase2 = fase2.filter(val => !clienteWA.includes(val));
+                    datos[2] = message.body;
                   })
                   .catch((erro) => {
                     console.error('Error when sending: ', erro); //return object error
@@ -256,6 +261,7 @@ ManejadorController.createBot = (req, res) => {
                   .then((result) => {
                     // console.log('Result: ', result); //return object success
                     fase3 = fase3.filter(val => !clienteWA.includes(val));
+                    datos[3] = message.body;
                   })
                   .catch((erro) => {
                     console.error('Error when sending: ', erro); //return object error
@@ -355,7 +361,7 @@ ManejadorController.createBot = (req, res) => {
           } else {
 
             client
-              .sendText(message.from, `Hola 👋, vemos que tienes permisos en este manejador :(`)
+              .sendText(message.from, `Hola 👋, vemos que no tienes permisos en este manejador :(`)
               .then((result) => {
                 //console.log('Result: ', result); //return object success
               })
