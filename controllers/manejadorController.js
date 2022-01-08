@@ -70,6 +70,8 @@ ManejadorController.createBot = (req, res) => {
 
     const getDataClientes = (nameSesion) => {
 
+      clientes = [];
+
       sequelize_conexion.query(`select clientes.telefono 
     from  jiras inner join clientes ON jiras.id = clientes.jiraId
     where jiras.telefono = '${nameSesion}'`, { model: clienteModel })
@@ -89,6 +91,8 @@ ManejadorController.createBot = (req, res) => {
     }
 
     const getDataProyectos = (nameSesion) => {
+
+      proyectos = [];
 
       sequelize_conexion.query(`Select proyectos.nombre , proyectos.tipo 
     from  jiras inner join proyectos ON jiras.id = proyectos.jiraId
@@ -112,6 +116,8 @@ ManejadorController.createBot = (req, res) => {
 
     const getDataJira = (nameSesion) => {
 
+      jiraCredencials = null;
+
       sequelize_conexion.query(`Select url_jira, usuario, contraseya from  jiras where telefono = '${nameSesion}' limit 1;`)
         .then(data => {
           jiraCredencials = data[0][0];
@@ -129,12 +135,14 @@ ManejadorController.createBot = (req, res) => {
 
     function start(client) {
 
-      getDataClientes(client.session);
-      getDataProyectos(client.session);
-      getDataJira(client.session);
-
+     
       // example: reply every message with "Hi!""
       client.onMessage((message) => {
+
+        getDataClientes(client.session);
+        getDataProyectos(client.session);
+        getDataJira(client.session);
+  
 
         try {
 
