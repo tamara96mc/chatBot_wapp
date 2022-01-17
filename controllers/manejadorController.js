@@ -175,9 +175,11 @@ ManejadorController.createBot = (req, res) => {
                 nombre = message.sender.pushname;
                 //datos.push(message.body);
 
-                datos[0] = message.body;
+                
 
                 if (fase1.includes(clienteWA)) {
+
+                  datos[0] = message.body;
 
                   client
                     .sendText(message.from, `Vale. ¿Me puedes facilitar algo más de información? 💬`)
